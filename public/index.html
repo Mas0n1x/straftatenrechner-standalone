@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,11 @@
             --border-light: #3a3a42;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -36,7 +41,11 @@
             min-height: 100vh;
         }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 24px;
+        }
 
         .page-header {
             display: flex;
@@ -55,7 +64,9 @@
             gap: 12px;
         }
 
-        .page-title i { color: var(--accent); }
+        .page-title i {
+            color: var(--accent);
+        }
 
         .network-badge {
             display: inline-flex;
@@ -86,7 +97,9 @@
             text-decoration: none;
         }
 
-        .btn:hover { background: var(--bg-hover); }
+        .btn:hover {
+            background: var(--bg-hover);
+        }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
@@ -104,7 +117,10 @@
             color: var(--danger);
         }
 
-        .btn-danger:hover { background: var(--danger); color: white; }
+        .btn-danger:hover {
+            background: var(--danger);
+            color: white;
+        }
 
         .btn-success {
             background: var(--success-glow);
@@ -112,7 +128,10 @@
             color: var(--success);
         }
 
-        .btn-success:hover { background: var(--success); color: white; }
+        .btn-success:hover {
+            background: var(--success);
+            color: white;
+        }
 
         /* Network Selection Page */
         .network-page {
@@ -132,7 +151,9 @@
             gap: 16px;
         }
 
-        .network-page h1 i { color: var(--accent); }
+        .network-page h1 i {
+            color: var(--accent);
+        }
 
         .network-page .subtitle {
             color: var(--text-secondary);
@@ -178,7 +199,9 @@
             color: var(--text-secondary);
         }
 
-        .network-item i { color: var(--text-secondary); }
+        .network-item i {
+            color: var(--text-secondary);
+        }
 
         .empty-networks {
             text-align: center;
@@ -193,13 +216,24 @@
         }
 
         /* Calculator Page */
-        .calculator-layout { display: flex; gap: 24px; }
+        .calculator-layout {
+            display: flex;
+            gap: 24px;
+        }
 
-        .calculator-sidebar { width: 400px; flex-shrink: 0; }
+        .calculator-sidebar {
+            width: 400px;
+            flex-shrink: 0;
+        }
 
-        .calculator-main { flex: 1; }
+        .calculator-main {
+            flex: 1;
+        }
 
-        .search-container { position: relative; margin-bottom: 16px; }
+        .search-container {
+            position: relative;
+            margin-bottom: 16px;
+        }
 
         .search-icon {
             position: absolute;
@@ -225,9 +259,13 @@
             box-shadow: 0 0 0 3px var(--accent-glow);
         }
 
-        .search-input::placeholder { color: var(--text-secondary); }
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
 
-        .calc-category { margin-bottom: 16px; }
+        .calc-category {
+            margin-bottom: 16px;
+        }
 
         .calc-category-header {
             font-weight: 600;
@@ -247,15 +285,27 @@
             transition: all 0.2s;
         }
 
-        .calc-offense-item:hover { background: var(--bg-hover); }
+        .calc-offense-item:hover {
+            background: var(--bg-hover);
+        }
 
-        .calc-offense-item.selected { background: var(--primary); color: white; }
+        .calc-offense-item.selected {
+            background: var(--primary);
+            color: white;
+        }
 
-        .calc-offense-item .name { font-weight: 500; }
+        .calc-offense-item .name {
+            font-weight: 500;
+        }
 
-        .calc-offense-item .details { font-size: 12px; color: var(--text-secondary); }
+        .calc-offense-item .details {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
 
-        .calc-offense-item.selected .details { color: rgba(255, 255, 255, 0.8); }
+        .calc-offense-item.selected .details {
+            color: rgba(255, 255, 255, 0.8);
+        }
 
         .card {
             background: var(--bg-secondary);
@@ -270,9 +320,14 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .card-header h3 { font-size: 16px; font-weight: 600; }
+        .card-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+        }
 
-        .card-body { padding: 20px; }
+        .card-body {
+            padding: 20px;
+        }
 
         .selected-item {
             display: flex;
@@ -284,11 +339,24 @@
             margin-bottom: 8px;
         }
 
-        .selected-item .info { flex: 1; }
-        .selected-item .name { font-weight: 500; }
-        .selected-item .details { font-size: 12px; color: var(--text-secondary); }
+        .selected-item .info {
+            flex: 1;
+        }
 
-        .modifiers { margin-top: 20px; display: flex; gap: 12px; }
+        .selected-item .name {
+            font-weight: 500;
+        }
+
+        .selected-item .details {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .modifiers {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+        }
 
         .calc-modifier {
             flex: 1;
@@ -301,8 +369,13 @@
             transition: all 0.2s;
         }
 
-        .calc-modifier .label { font-size: 12px; }
-        .calc-modifier .value { font-weight: bold; }
+        .calc-modifier .label {
+            font-size: 12px;
+        }
+
+        .calc-modifier .value {
+            font-weight: bold;
+        }
 
         .totals-section {
             margin-top: 20px;
@@ -311,9 +384,15 @@
             padding: 20px;
         }
 
-        .totals-section h4 { margin-bottom: 16px; }
+        .totals-section h4 {
+            margin-bottom: 16px;
+        }
 
-        .totals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .totals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
 
         .total-item {
             text-align: center;
@@ -322,11 +401,28 @@
             border-radius: 8px;
         }
 
-        .total-item .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
-        .total-item .value { font-size: 28px; font-weight: bold; }
-        .total-item .value.jail { color: var(--danger); }
-        .total-item .value.fine { color: var(--success); }
-        .total-item .value.points { color: var(--warning); }
+        .total-item .label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .total-item .value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .total-item .value.jail {
+            color: var(--danger);
+        }
+
+        .total-item .value.fine {
+            color: var(--success);
+        }
+
+        .total-item .value.points {
+            color: var(--warning);
+        }
 
         .modified-totals {
             display: none;
@@ -337,11 +433,27 @@
             border: 1px solid var(--warning);
         }
 
-        .modified-totals .modifiers-text { font-size: 12px; color: var(--warning); margin-bottom: 12px; }
-        .modified-totals .totals-grid { gap: 12px; }
-        .modified-totals .total-item { padding: 8px; }
-        .modified-totals .total-item .label { font-size: 11px; }
-        .modified-totals .total-item .value { font-size: 20px; }
+        .modified-totals .modifiers-text {
+            font-size: 12px;
+            color: var(--warning);
+            margin-bottom: 12px;
+        }
+
+        .modified-totals .totals-grid {
+            gap: 12px;
+        }
+
+        .modified-totals .total-item {
+            padding: 8px;
+        }
+
+        .modified-totals .total-item .label {
+            font-size: 11px;
+        }
+
+        .modified-totals .total-item .value {
+            font-size: 20px;
+        }
 
         .limit-warning {
             display: none;
@@ -361,11 +473,25 @@
             color: var(--text-secondary);
         }
 
-        .empty-state i { font-size: 48px; margin-bottom: 16px; opacity: 0.3; }
-        .empty-state p { margin-bottom: 8px; }
-        .empty-state .hint { font-size: 12px; }
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
 
-        .session-controls { display: flex; gap: 8px; align-items: center; }
+        .empty-state p {
+            margin-bottom: 8px;
+        }
+
+        .empty-state .hint {
+            font-size: 12px;
+        }
+
+        .session-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
 
         .session-info {
             display: none;
@@ -375,22 +501,40 @@
             border: 2px solid var(--success);
         }
 
-        .session-info .label { color: var(--text-secondary); font-size: 12px; }
-        .session-info .code { font-weight: bold; font-size: 18px; letter-spacing: 2px; color: var(--success); }
-        .session-info .status { font-size: 10px; margin-left: 8px; }
+        .session-info .label {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        .session-info .code {
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 2px;
+            color: var(--success);
+        }
+
+        .session-info .status {
+            font-size: 10px;
+            margin-left: 8px;
+        }
 
         /* Modal */
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: rgba(0, 0, 0, 0.7);
             z-index: 1000;
             justify-content: center;
             align-items: center;
         }
 
-        .modal-overlay.active { display: flex; }
+        .modal-overlay.active {
+            display: flex;
+        }
 
         .modal {
             background: var(--bg-secondary);
@@ -401,9 +545,13 @@
             width: 90%;
         }
 
-        .modal h3 { margin-bottom: 16px; }
+        .modal h3 {
+            margin-bottom: 16px;
+        }
 
-        .modal .form-group { margin-bottom: 16px; }
+        .modal .form-group {
+            margin-bottom: 16px;
+        }
 
         .modal .form-group label {
             display: block;
@@ -422,32 +570,69 @@
             font-size: 14px;
         }
 
-        .modal input:focus { outline: none; border-color: var(--accent); }
+        .modal input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
 
-        .modal-buttons { display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px; }
+        .modal-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-primary); }
-        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
 
-        .page { display: none; }
-        .page.active { display: block; }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
 
         @media (max-width: 900px) {
-            .calculator-layout { flex-direction: column; }
-            .calculator-sidebar { width: 100%; }
-            .totals-grid { grid-template-columns: 1fr; }
-            .modifiers { flex-direction: column; }
+            .calculator-layout {
+                flex-direction: column;
+            }
+
+            .calculator-sidebar {
+                width: 100%;
+            }
+
+            .totals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modifiers {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Network Selection Page -->
     <div class="page active" id="page-networks">
         <div class="network-page">
             <h1><i class="fas fa-calculator"></i> Straftatenrechner</h1>
-            <p class="subtitle">Waehle ein Netzwerk um fortzufahren</p>
+            <p class="subtitle">Wähle ein Netzwerk um fortzufahren</p>
 
             <div class="network-actions">
                 <a href="/network-admin.html" class="btn" style="font-size: 12px; padding: 8px 12px;">
@@ -484,7 +669,8 @@
                         <button class="btn" id="btnJoinSession" onclick="showJoinSessionModal()">
                             <i class="fas fa-sign-in-alt"></i> Session beitreten
                         </button>
-                        <button class="btn btn-danger" id="btnLeaveSession" onclick="leaveCalcSession()" style="display: none;">
+                        <button class="btn btn-danger" id="btnLeaveSession" onclick="leaveCalcSession()"
+                            style="display: none;">
                             <i class="fas fa-sign-out-alt"></i> Verlassen
                         </button>
                     </div>
@@ -512,21 +698,27 @@
                 <div class="calculator-main">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Ausgewaehlte Straftaten</h3>
+                            <h3>Ausgewählte Straftaten</h3>
                         </div>
                         <div class="card-body">
                             <div id="calcSelectedList"></div>
 
                             <div class="modifiers">
-                                <button class="calc-modifier" id="btnCalcEigenJudikative" onclick="toggleCalcModifier('eigenJudikative')" style="border-color: #17a2b8; color: #17a2b8;">
+                                <button class="calc-modifier" id="btnCalcEigenJudikative"
+                                    onclick="toggleCalcModifier('eigenJudikative')"
+                                    style="border-color: #17a2b8; color: #17a2b8;">
                                     <div class="label">Eigen Judikative</div>
                                     <div class="value">-10% Haft</div>
                                 </button>
-                                <button class="calc-modifier" id="btnCalcKrimiStatus" onclick="toggleCalcModifier('krimiStatus')" style="border-color: #fd7e14; color: #fd7e14;">
+                                <button class="calc-modifier" id="btnCalcKrimiStatus"
+                                    onclick="toggleCalcModifier('krimiStatus')"
+                                    style="border-color: #fd7e14; color: #fd7e14;">
                                     <div class="label">Krimi Status</div>
                                     <div class="value">x3 Geld</div>
                                 </button>
-                                <button class="calc-modifier" id="btnCalcTerrorStatus" onclick="toggleCalcModifier('terrorStatus')" style="border-color: #dc3545; color: #dc3545;">
+                                <button class="calc-modifier" id="btnCalcTerrorStatus"
+                                    onclick="toggleCalcModifier('terrorStatus')"
+                                    style="border-color: #dc3545; color: #dc3545;">
                                     <div class="label">Terror Status</div>
                                     <div class="value">x5 Geld</div>
                                 </button>
@@ -568,7 +760,8 @@
                                 </div>
 
                                 <div class="limit-warning" id="calcLimitWarning">
-                                    ⚠️ Ueber 50.000$ und/oder 90 Minuten! NUR mit DOJ-Erlaubnis (oder Krimi/Terrorstatus)!
+                                    ⚠️ Über 50.000$ und/oder 90 Minuten! NUR mit DOJ-Erlaubnis (oder
+                                    Krimi/Terrorstatus)!
                                 </div>
                             </div>
                         </div>
@@ -581,7 +774,8 @@
     <!-- Join Network Modal -->
     <div class="modal-overlay" id="joinNetworkModal">
         <div class="modal">
-            <h3><i class="fas fa-sign-in-alt" style="color: var(--accent); margin-right: 8px;"></i>Netzwerk beitreten</h3>
+            <h3><i class="fas fa-sign-in-alt" style="color: var(--accent); margin-right: 8px;"></i>Netzwerk beitreten
+            </h3>
             <input type="hidden" id="joinNetworkId">
             <p style="margin-bottom: 16px; color: var(--text-secondary);">
                 Netzwerk: <strong id="joinNetworkName" style="color: var(--text-primary);"></strong>
@@ -622,11 +816,27 @@
             <h3>Session beitreten</h3>
             <div class="form-group">
                 <label>Session-Code</label>
-                <input type="text" id="joinSessionCode" maxlength="4" placeholder="0000" style="text-align: center; letter-spacing: 8px; font-size: 24px;">
+                <input type="text" id="joinSessionCode" maxlength="4" placeholder="0000"
+                    style="text-align: center; letter-spacing: 8px; font-size: 24px;">
             </div>
             <div class="modal-buttons">
                 <button class="btn" onclick="closeModal('calcSessionModal')">Abbrechen</button>
                 <button class="btn btn-primary" onclick="joinCalcSession()">Beitreten</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Session Created Modal -->
+    <div class="modal-overlay" id="sessionCreatedModal">
+        <div class="modal">
+            <h3>Session erstellt!</h3>
+            <p style="text-align: center; margin-bottom: 10px;">Teilen Sie diesen Code mit Ihrem Kollegen:</p>
+            <div
+                style="text-align: center; letter-spacing: 8px; font-size: 32px; font-weight: bold; margin-bottom: 24px; color: #17a2b8;">
+                <span id="createdSessionCodeDisplay"></span>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" onclick="closeModal('sessionCreatedModal')">Verstanden</button>
             </div>
         </div>
     </div>
@@ -876,7 +1086,8 @@
                 connectCalcWebSocket(calcSessionCode);
                 calcSyncEnabled = true;
 
-                alert(`Session erstellt! Code: ${calcSessionCode}\n\nTeilen Sie diesen Code mit Ihrem Kollegen.`);
+                document.getElementById('createdSessionCodeDisplay').textContent = calcSessionCode;
+                openModal('sessionCreatedModal');
             } catch (err) {
                 alert('Fehler beim Erstellen der Session: ' + err.message);
             }
@@ -982,8 +1193,8 @@
                     <div class="calc-category">
                         <div class="calc-category-header">${catName}</div>
                         ${offenses.map(o => {
-                            const isSelected = calcSelectedOffenses.some(s => s.id === o.id);
-                            return `
+                    const isSelected = calcSelectedOffenses.some(s => s.id === o.id);
+                    return `
                                 <div class="calc-offense-item ${isSelected ? 'selected' : ''}" onclick="toggleCalcOffense(${o.id})">
                                     <div class="name">${o.name}</div>
                                     <div class="details">
@@ -991,7 +1202,7 @@
                                     </div>
                                 </div>
                             `;
-                        }).join('')}
+                }).join('')}
                     </div>
                 `;
             });
@@ -1025,8 +1236,8 @@
                 container.innerHTML = `
                     <div class="empty-state">
                         <i class="fas fa-balance-scale"></i>
-                        <p>Keine Straftaten ausgewaehlt</p>
-                        <p class="hint">Waehlen Sie Straftaten aus der Liste links aus</p>
+                        <p>Keine Straftaten ausgewählt</p>
+                        <p class="hint">Wählen Sie Straftaten aus der Liste links aus</p>
                     </div>
                 `;
                 return;
@@ -1193,4 +1404,5 @@
         });
     </script>
 </body>
+
 </html>

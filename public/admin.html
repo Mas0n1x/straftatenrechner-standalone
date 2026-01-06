@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,11 @@
             --border-light: #3a3a42;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -36,7 +41,11 @@
             min-height: 100vh;
         }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
 
         .page-header {
             display: flex;
@@ -55,7 +64,9 @@
             gap: 12px;
         }
 
-        .page-title i { color: var(--accent); }
+        .page-title i {
+            color: var(--accent);
+        }
 
         .network-badge {
             display: inline-flex;
@@ -86,7 +97,9 @@
             text-decoration: none;
         }
 
-        .btn:hover { background: var(--bg-hover); }
+        .btn:hover {
+            background: var(--bg-hover);
+        }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
@@ -104,7 +117,10 @@
             color: var(--danger);
         }
 
-        .btn-danger:hover { background: var(--danger); color: white; }
+        .btn-danger:hover {
+            background: var(--danger);
+            color: white;
+        }
 
         .btn-success {
             background: var(--success-glow);
@@ -112,9 +128,15 @@
             color: var(--success);
         }
 
-        .btn-success:hover { background: var(--success); color: white; }
+        .btn-success:hover {
+            background: var(--success);
+            color: white;
+        }
 
-        .btn-sm { padding: 6px 12px; font-size: 13px; }
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 13px;
+        }
 
         .tabs {
             display: flex;
@@ -135,8 +157,15 @@
             color: var(--text-secondary);
         }
 
-        .tab:hover { background: var(--bg-tertiary); color: var(--text-primary); }
-        .tab.active { background: var(--accent); color: white; }
+        .tab:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .tab.active {
+            background: var(--accent);
+            color: white;
+        }
 
         .card {
             background: var(--bg-secondary);
@@ -155,11 +184,18 @@
             align-items: center;
         }
 
-        .card-header h3 { font-size: 16px; font-weight: 600; }
+        .card-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+        }
 
-        .card-body { padding: 20px; }
+        .card-body {
+            padding: 20px;
+        }
 
-        .form-group { margin-bottom: 16px; }
+        .form-group {
+            margin-bottom: 16px;
+        }
 
         .form-group label {
             display: block;
@@ -191,11 +227,17 @@
             gap: 16px;
         }
 
-        .table-container { overflow-x: auto; }
+        .table-container {
+            overflow-x: auto;
+        }
 
-        table { width: 100%; border-collapse: collapse; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-        th, td {
+        th,
+        td {
             padding: 12px 16px;
             text-align: left;
             border-bottom: 1px solid var(--border);
@@ -209,7 +251,9 @@
             color: var(--text-secondary);
         }
 
-        tr:hover td { background: var(--bg-tertiary); }
+        tr:hover td {
+            background: var(--bg-tertiary);
+        }
 
         .badge {
             display: inline-block;
@@ -219,12 +263,25 @@
             font-weight: 600;
         }
 
-        .badge-danger { background: var(--danger-glow); color: var(--danger); }
-        .badge-success { background: var(--success-glow); color: var(--success); }
+        .badge-danger {
+            background: var(--danger-glow);
+            color: var(--danger);
+        }
 
-        .actions { display: flex; gap: 8px; }
+        .badge-success {
+            background: var(--success-glow);
+            color: var(--success);
+        }
 
-        .search-container { position: relative; margin-bottom: 16px; }
+        .actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-container {
+            position: relative;
+            margin-bottom: 16px;
+        }
 
         .search-icon {
             position: absolute;
@@ -253,7 +310,10 @@
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: rgba(0, 0, 0, 0.7);
             z-index: 1000;
             justify-content: center;
@@ -261,7 +321,9 @@
             padding: 20px;
         }
 
-        .modal-overlay.active { display: flex; }
+        .modal-overlay.active {
+            display: flex;
+        }
 
         .modal {
             background: var(--bg-secondary);
@@ -281,7 +343,9 @@
             align-items: center;
         }
 
-        .modal-header h3 { font-size: 18px; }
+        .modal-header h3 {
+            font-size: 18px;
+        }
 
         .modal-close {
             background: none;
@@ -292,9 +356,13 @@
             padding: 4px;
         }
 
-        .modal-close:hover { color: var(--text-primary); }
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
 
-        .modal-body { padding: 20px; }
+        .modal-body {
+            padding: 20px;
+        }
 
         .modal-footer {
             padding: 16px 20px;
@@ -314,8 +382,14 @@
             margin-bottom: 8px;
         }
 
-        .category-item .name { font-weight: 500; }
-        .category-item .count { font-size: 12px; color: var(--text-secondary); }
+        .category-item .name {
+            font-weight: 500;
+        }
+
+        .category-item .count {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
 
         .empty-state {
             padding: 40px;
@@ -323,22 +397,55 @@
             color: var(--text-secondary);
         }
 
-        .empty-state i { font-size: 48px; margin-bottom: 16px; opacity: 0.3; }
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
 
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
+        .tab-content {
+            display: none;
+        }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-primary); }
-        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+        .tab-content.active {
+            display: block;
+        }
 
-        .checkbox-wrapper { display: flex; align-items: center; gap: 8px; }
-        .checkbox-wrapper input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent); }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
 
-        select.form-control { cursor: pointer; }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+        }
+
+        select.form-control {
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="page-header">
@@ -351,7 +458,7 @@
                 </span>
             </h1>
             <a href="/" class="btn">
-                <i class="fas fa-arrow-left"></i> Zurueck zum Rechner
+                <i class="fas fa-arrow-left"></i> Zurück zum Rechner
             </a>
         </div>
 
@@ -368,7 +475,8 @@
         <div class="tab-content active" id="tab-laws">
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-gavel" style="margin-right: 8px; color: var(--accent);"></i>Gesetze verwalten</h3>
+                    <h3><i class="fas fa-gavel" style="margin-right: 8px; color: var(--accent);"></i>Gesetze verwalten
+                    </h3>
                     <button class="btn btn-primary" onclick="openLawModal()">
                         <i class="fas fa-plus"></i> Neues Gesetz
                     </button>
@@ -376,7 +484,8 @@
                 <div class="card-body">
                     <div class="search-container">
                         <i class="fas fa-search search-icon"></i>
-                        <input type="text" class="search-input" id="lawSearch" placeholder="Gesetz suchen..." oninput="filterLaws()">
+                        <input type="text" class="search-input" id="lawSearch" placeholder="Gesetz suchen..."
+                            oninput="filterLaws()">
                     </div>
                     <div class="table-container">
                         <table>
@@ -403,7 +512,8 @@
         <div class="tab-content" id="tab-categories">
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-folder" style="margin-right: 8px; color: var(--warning);"></i>Kategorien verwalten</h3>
+                    <h3><i class="fas fa-folder" style="margin-right: 8px; color: var(--warning);"></i>Kategorien
+                        verwalten</h3>
                     <button class="btn btn-primary" onclick="openCategoryModal()">
                         <i class="fas fa-plus"></i> Neue Kategorie
                     </button>
@@ -427,7 +537,7 @@
                 <div class="form-group">
                     <label>Kategorie *</label>
                     <select class="form-control" id="lawCategory" required>
-                        <option value="">Kategorie waehlen...</option>
+                        <option value="">Kategorie wählen...</option>
                     </select>
                 </div>
                 <div class="form-row">
@@ -437,12 +547,14 @@
                     </div>
                     <div class="form-group">
                         <label>Titel *</label>
-                        <input type="text" class="form-control" id="lawTitle" placeholder="z.B. Koerperverletzung" required>
+                        <input type="text" class="form-control" id="lawTitle" placeholder="z.B. Körperverletzung"
+                            required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Beschreibung</label>
-                    <textarea class="form-control" id="lawDescription" rows="3" placeholder="Optionale Beschreibung..."></textarea>
+                    <textarea class="form-control" id="lawDescription" rows="3"
+                        placeholder="Optionale Beschreibung..."></textarea>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
@@ -473,7 +585,8 @@
                         <label>&nbsp;</label>
                         <div class="checkbox-wrapper" style="height: 42px; display: flex; align-items: center;">
                             <input type="checkbox" id="lawIsFelony">
-                            <label for="lawIsFelony" style="margin: 0; color: var(--text-primary);">Ist ein Verbrechen</label>
+                            <label for="lawIsFelony" style="margin: 0; color: var(--text-primary);">Ist ein
+                                Verbrechen</label>
                         </div>
                     </div>
                 </div>
@@ -498,7 +611,8 @@
                 <input type="hidden" id="categoryId">
                 <div class="form-group">
                     <label>Kategorie-Name *</label>
-                    <input type="text" class="form-control" id="categoryName" placeholder="z.B. Verkehrsdelikte" required>
+                    <input type="text" class="form-control" id="categoryName" placeholder="z.B. Verkehrsdelikte"
+                        required>
                 </div>
             </div>
             <div class="modal-footer">
@@ -514,16 +628,16 @@
     <div class="modal-overlay" id="deleteModal">
         <div class="modal" style="max-width: 400px;">
             <div class="modal-header">
-                <h3>Loeschen bestaetigen</h3>
+                <h3>Löschen bestätigen</h3>
                 <button class="modal-close" onclick="closeModal('deleteModal')">&times;</button>
             </div>
             <div class="modal-body">
-                <p id="deleteMessage">Sind Sie sicher, dass Sie diesen Eintrag loeschen moechten?</p>
+                <p id="deleteMessage">Sind Sie sicher, dass Sie diesen Eintrag löschen möchten?</p>
             </div>
             <div class="modal-footer">
                 <button class="btn" onclick="closeModal('deleteModal')">Abbrechen</button>
                 <button class="btn btn-danger" id="confirmDeleteBtn">
-                    <i class="fas fa-trash"></i> Loeschen
+                    <i class="fas fa-trash"></i> Löschen
                 </button>
             </div>
         </div>
@@ -609,7 +723,7 @@
                             <button class="btn btn-sm" onclick="editLaw(${law.id})" title="Bearbeiten">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <button class="btn btn-sm btn-danger" onclick="confirmDeleteLaw(${law.id})" title="Loeschen">
+                            <button class="btn btn-sm btn-danger" onclick="confirmDeleteLaw(${law.id})" title="Löschen">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
@@ -645,7 +759,7 @@
                         <button class="btn btn-sm" onclick="editCategory('${cat}')" title="Bearbeiten">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button class="btn btn-sm btn-danger" onclick="confirmDeleteCategory('${cat}')" title="Loeschen">
+                        <button class="btn btn-sm btn-danger" onclick="confirmDeleteCategory('${cat}')" title="Löschen">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
@@ -655,7 +769,7 @@
 
         function updateCategorySelect() {
             const select = document.getElementById('lawCategory');
-            select.innerHTML = '<option value="">Kategorie waehlen...</option>' +
+            select.innerHTML = '<option value="">Kategorie wählen...</option>' +
                 allCategories.map(cat => `<option value="${cat}">${cat}</option>`).join('');
         }
 
@@ -699,7 +813,7 @@
             };
 
             if (!data.category || !data.paragraph || !data.title) {
-                alert('Bitte fuellen Sie alle Pflichtfelder aus.');
+                alert('Bitte füllen Sie alle Pflichtfelder aus.');
                 return;
             }
 
@@ -719,7 +833,7 @@
 
         function confirmDeleteLaw(id) {
             const law = allLaws.find(l => l.id === id);
-            document.getElementById('deleteMessage').textContent = `Sind Sie sicher, dass Sie "${law.paragraph} ${law.title}" loeschen moechten?`;
+            document.getElementById('deleteMessage').textContent = `Sind Sie sicher, dass Sie "${law.paragraph} ${law.title}" löschen möchten?`;
             document.getElementById('confirmDeleteBtn').onclick = () => deleteLaw(id);
             openModal('deleteModal');
         }
@@ -777,10 +891,10 @@
         function confirmDeleteCategory(name) {
             const count = allLaws.filter(l => l.category === name).length;
             if (count > 0) {
-                alert(`Diese Kategorie enthaelt ${count} Gesetze und kann nicht geloescht werden.`);
+                alert(`Diese Kategorie enthält ${count} Gesetze und kann nicht gelöscht werden.`);
                 return;
             }
-            document.getElementById('deleteMessage').textContent = `Sind Sie sicher, dass Sie die Kategorie "${name}" loeschen moechten?`;
+            document.getElementById('deleteMessage').textContent = `Sind Sie sicher, dass Sie die Kategorie "${name}" löschen möchten?`;
             document.getElementById('confirmDeleteBtn').onclick = () => deleteCategory(name);
             openModal('deleteModal');
         }
@@ -833,4 +947,5 @@
         });
     </script>
 </body>
+
 </html>

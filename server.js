@@ -101,18 +101,18 @@ function getNetworkDb(networkId) {
 function insertDefaultLaws(db) {
   const defaultLaws = [
     // Verkehrsdelikte
-    { category: 'Verkehrsdelikte', paragraph: '§ 1', title: 'Geschwindigkeitsueberschreitung', fine_min: 500, fine_max: 2000, jail_min: 0, jail_max: 0, points: 1 },
+    { category: 'Verkehrsdelikte', paragraph: '§ 1', title: 'Geschwindigkeitsüberschreitung', fine_min: 500, fine_max: 2000, jail_min: 0, jail_max: 0, points: 1 },
     { category: 'Verkehrsdelikte', paragraph: '§ 2', title: 'Fahren ohne Licht', fine_min: 200, fine_max: 500, jail_min: 0, jail_max: 0, points: 1 },
     { category: 'Verkehrsdelikte', paragraph: '§ 3', title: 'Alkoholfahrt', fine_min: 2000, fine_max: 5000, jail_min: 5, jail_max: 15, points: 3 },
     { category: 'Verkehrsdelikte', paragraph: '§ 4', title: 'Drogenfahrt', fine_min: 3000, fine_max: 8000, jail_min: 10, jail_max: 20, points: 3 },
-    { category: 'Verkehrsdelikte', paragraph: '§ 5', title: 'Fahren ohne Fuehrerschein', fine_min: 1500, fine_max: 3500, jail_min: 5, jail_max: 10, points: 2 },
+    { category: 'Verkehrsdelikte', paragraph: '§ 5', title: 'Fahren ohne Führerschein', fine_min: 1500, fine_max: 3500, jail_min: 5, jail_max: 10, points: 2 },
     { category: 'Verkehrsdelikte', paragraph: '§ 6', title: 'Flucht vor AVK', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 30, points: 5 },
-    { category: 'Verkehrsdelikte', paragraph: '§ 7', title: 'Gefaehrliches Fahren', fine_min: 3000, fine_max: 8000, jail_min: 10, jail_max: 25, points: 4 },
+    { category: 'Verkehrsdelikte', paragraph: '§ 7', title: 'Gefährliches Fahren', fine_min: 3000, fine_max: 8000, jail_min: 10, jail_max: 25, points: 4 },
 
     // Gewaltdelikte
-    { category: 'Gewaltdelikte', paragraph: '§ 10', title: 'Koerperverletzung', fine_min: 2000, fine_max: 5000, jail_min: 5, jail_max: 15, points: 0, is_felony: 0 },
-    { category: 'Gewaltdelikte', paragraph: '§ 11', title: 'Gefaehrliche Koerperverletzung', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 35, points: 0, is_felony: 1 },
-    { category: 'Gewaltdelikte', paragraph: '§ 12', title: 'Schwere Koerperverletzung', fine_min: 10000, fine_max: 25000, jail_min: 25, jail_max: 50, points: 0, is_felony: 1 },
+    { category: 'Gewaltdelikte', paragraph: '§ 10', title: 'Körperverletzung', fine_min: 2000, fine_max: 5000, jail_min: 5, jail_max: 15, points: 0, is_felony: 0 },
+    { category: 'Gewaltdelikte', paragraph: '§ 11', title: 'Gefährliche Körperverletzung', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 35, points: 0, is_felony: 1 },
+    { category: 'Gewaltdelikte', paragraph: '§ 12', title: 'Schwere Körperverletzung', fine_min: 10000, fine_max: 25000, jail_min: 25, jail_max: 50, points: 0, is_felony: 1 },
     { category: 'Gewaltdelikte', paragraph: '§ 13', title: 'Totschlag', fine_min: 25000, fine_max: 50000, jail_min: 45, jail_max: 90, points: 0, is_felony: 1 },
     { category: 'Gewaltdelikte', paragraph: '§ 14', title: 'Mord', fine_min: 50000, fine_max: 100000, jail_min: 90, jail_max: 180, points: 0, is_felony: 1 },
     { category: 'Gewaltdelikte', paragraph: '§ 15', title: 'Bedrohung', fine_min: 1000, fine_max: 3000, jail_min: 0, jail_max: 10, points: 0, is_felony: 0 },
@@ -123,18 +123,18 @@ function insertDefaultLaws(db) {
     { category: 'Eigentumsdelikte', paragraph: '§ 21', title: 'Schwerer Diebstahl', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 30, points: 0, is_felony: 1 },
     { category: 'Eigentumsdelikte', paragraph: '§ 22', title: 'Raub', fine_min: 10000, fine_max: 30000, jail_min: 20, jail_max: 45, points: 0, is_felony: 1 },
     { category: 'Eigentumsdelikte', paragraph: '§ 23', title: 'Schwerer Raub', fine_min: 20000, fine_max: 50000, jail_min: 35, jail_max: 70, points: 0, is_felony: 1 },
-    { category: 'Eigentumsdelikte', paragraph: '§ 24', title: 'Sachbeschaedigung', fine_min: 500, fine_max: 3000, jail_min: 0, jail_max: 10, points: 0, is_felony: 0 },
+    { category: 'Eigentumsdelikte', paragraph: '§ 24', title: 'Sachbeschädigung', fine_min: 500, fine_max: 3000, jail_min: 0, jail_max: 10, points: 0, is_felony: 0 },
     { category: 'Eigentumsdelikte', paragraph: '§ 25', title: 'Fahrzeugdiebstahl', fine_min: 3000, fine_max: 10000, jail_min: 10, jail_max: 25, points: 0, is_felony: 1 },
 
     // Waffendelikte
     { category: 'Waffendelikte', paragraph: '§ 30', title: 'Illegaler Waffenbesitz', fine_min: 5000, fine_max: 15000, jail_min: 10, jail_max: 30, points: 0, is_felony: 1 },
     { category: 'Waffendelikte', paragraph: '§ 31', title: 'Illegaler Waffenhandel', fine_min: 15000, fine_max: 40000, jail_min: 25, jail_max: 50, points: 0, is_felony: 1 },
-    { category: 'Waffendelikte', paragraph: '§ 32', title: 'Fuehren einer Schusswaffe', fine_min: 3000, fine_max: 8000, jail_min: 5, jail_max: 20, points: 0, is_felony: 0 },
-    { category: 'Waffendelikte', paragraph: '§ 33', title: 'Schiessen in der Oeffentlichkeit', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 35, points: 0, is_felony: 1 },
+    { category: 'Waffendelikte', paragraph: '§ 32', title: 'Führen einer Schusswaffe', fine_min: 3000, fine_max: 8000, jail_min: 5, jail_max: 20, points: 0, is_felony: 0 },
+    { category: 'Waffendelikte', paragraph: '§ 33', title: 'Schießen in der Öffentlichkeit', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 35, points: 0, is_felony: 1 },
 
     // Drogendelikte
     { category: 'Drogendelikte', paragraph: '§ 40', title: 'Drogenbesitz (geringe Menge)', fine_min: 1000, fine_max: 3000, jail_min: 0, jail_max: 10, points: 0, is_felony: 0 },
-    { category: 'Drogendelikte', paragraph: '§ 41', title: 'Drogenbesitz (grosse Menge)', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 30, points: 0, is_felony: 1 },
+    { category: 'Drogendelikte', paragraph: '§ 41', title: 'Drogenbesitz (große Menge)', fine_min: 5000, fine_max: 15000, jail_min: 15, jail_max: 30, points: 0, is_felony: 1 },
     { category: 'Drogendelikte', paragraph: '§ 42', title: 'Drogenhandel', fine_min: 15000, fine_max: 40000, jail_min: 25, jail_max: 50, points: 0, is_felony: 1 },
     { category: 'Drogendelikte', paragraph: '§ 43', title: 'Drogenproduktion', fine_min: 25000, fine_max: 60000, jail_min: 35, jail_max: 70, points: 0, is_felony: 1 },
 
@@ -356,7 +356,7 @@ app.delete('/api/networks/:id', (req, res) => {
   }
 
   mainDb.prepare('DELETE FROM networks WHERE id = ?').run(req.params.id);
-  res.json({ message: 'Netzwerk geloescht' });
+  res.json({ message: 'Netzwerk gelöscht' });
 });
 
 // ==================== NETWORK-SCOPED API ROUTES ====================
@@ -436,7 +436,7 @@ app.put('/api/networks/:networkId/laws/:id', (req, res) => {
 app.delete('/api/networks/:networkId/laws/:id', (req, res) => {
   const db = getNetworkDb(req.params.networkId);
   db.prepare('DELETE FROM laws WHERE id = ?').run(req.params.id);
-  res.json({ message: 'Gesetz geloescht' });
+  res.json({ message: 'Gesetz gelöscht' });
 });
 
 // Get law categories
@@ -491,11 +491,11 @@ app.delete('/api/networks/:networkId/law-categories/:name', (req, res) => {
 
   const lawCount = db.prepare('SELECT COUNT(*) as count FROM laws WHERE category = ?').get(name).count;
   if (lawCount > 0) {
-    return res.status(400).json({ error: `Kategorie enthaelt ${lawCount} Gesetze und kann nicht geloescht werden` });
+    return res.status(400).json({ error: `Kategorie enthält ${lawCount} Gesetze und kann nicht gelöscht werden` });
   }
 
   db.prepare('DELETE FROM law_categories WHERE name = ?').run(name);
-  res.json({ message: 'Kategorie geloescht' });
+  res.json({ message: 'Kategorie gelöscht' });
 });
 
 // ==================== CALCULATOR SESSIONS (Network-scoped) ====================
@@ -575,7 +575,7 @@ setInterval(() => {
     networkDbs.forEach((db, networkId) => {
       const result = db.prepare('DELETE FROM calc_sessions WHERE updated_at < ?').run(cutoff);
       if (result.changes > 0) {
-        console.log(`${result.changes} alte Calculator-Sessions in Netzwerk ${networkId} geloescht`);
+        console.log(`${result.changes} alte Calculator-Sessions in Netzwerk ${networkId} gelöscht`);
       }
     });
   } catch (error) {

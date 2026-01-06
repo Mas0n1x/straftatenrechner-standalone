@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,11 @@
             --border-light: #3a3a42;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -35,7 +40,11 @@
             min-height: 100vh;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
 
         .page-header {
             display: flex;
@@ -54,7 +63,9 @@
             gap: 12px;
         }
 
-        .page-title i { color: var(--warning); }
+        .page-title i {
+            color: var(--warning);
+        }
 
         .btn {
             display: inline-flex;
@@ -72,7 +83,9 @@
             text-decoration: none;
         }
 
-        .btn:hover { background: var(--bg-hover); }
+        .btn:hover {
+            background: var(--bg-hover);
+        }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
@@ -90,7 +103,10 @@
             color: var(--danger);
         }
 
-        .btn-danger:hover { background: var(--danger); color: white; }
+        .btn-danger:hover {
+            background: var(--danger);
+            color: white;
+        }
 
         .btn-success {
             background: var(--success-glow);
@@ -98,7 +114,10 @@
             color: var(--success);
         }
 
-        .btn-success:hover { background: var(--success); color: white; }
+        .btn-success:hover {
+            background: var(--success);
+            color: white;
+        }
 
         .btn-sm {
             padding: 6px 12px;
@@ -123,7 +142,9 @@
             gap: 12px;
         }
 
-        .login-page h1 i { color: var(--warning); }
+        .login-page h1 i {
+            color: var(--warning);
+        }
 
         .login-page .subtitle {
             color: var(--text-secondary);
@@ -139,7 +160,9 @@
             max-width: 400px;
         }
 
-        .login-box .form-group { margin-bottom: 20px; }
+        .login-box .form-group {
+            margin-bottom: 20px;
+        }
 
         .login-box label {
             display: block;
@@ -158,13 +181,24 @@
             font-size: 14px;
         }
 
-        .login-box input:focus { outline: none; border-color: var(--accent); }
+        .login-box input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
 
-        .login-box .btn-primary { width: 100%; justify-content: center; }
+        .login-box .btn-primary {
+            width: 100%;
+            justify-content: center;
+        }
 
         /* Admin Panel */
-        .panel { display: none; }
-        .panel.active { display: block; }
+        .panel {
+            display: none;
+        }
+
+        .panel.active {
+            display: block;
+        }
 
         .card {
             background: var(--bg-secondary);
@@ -183,9 +217,14 @@
             align-items: center;
         }
 
-        .card-header h3 { font-size: 16px; font-weight: 600; }
+        .card-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+        }
 
-        .card-body { padding: 20px; }
+        .card-body {
+            padding: 20px;
+        }
 
         .stats-row {
             display: grid;
@@ -274,14 +313,19 @@
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: rgba(0, 0, 0, 0.7);
             z-index: 1000;
             justify-content: center;
             align-items: center;
         }
 
-        .modal-overlay.active { display: flex; }
+        .modal-overlay.active {
+            display: flex;
+        }
 
         .modal {
             background: var(--bg-secondary);
@@ -299,7 +343,9 @@
             gap: 10px;
         }
 
-        .modal .form-group { margin-bottom: 16px; }
+        .modal .form-group {
+            margin-bottom: 16px;
+        }
 
         .modal .form-group label {
             display: block;
@@ -318,7 +364,10 @@
             font-size: 14px;
         }
 
-        .modal input:focus { outline: none; border-color: var(--accent); }
+        .modal input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
 
         .modal-buttons {
             display: flex;
@@ -343,9 +392,12 @@
             margin-bottom: 16px;
         }
 
-        .back-link:hover { color: var(--text-primary); }
+        .back-link:hover {
+            color: var(--text-primary);
+        }
 
         @media (max-width: 768px) {
+
             .network-table th:nth-child(3),
             .network-table td:nth-child(3) {
                 display: none;
@@ -353,12 +405,13 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Login Panel -->
     <div class="panel active" id="login-panel">
         <div class="login-page">
             <h1><i class="fas fa-shield-alt"></i> Netzwerk-Verwaltung</h1>
-            <p class="subtitle">Globales Admin-Panel fuer den Straftatenrechner</p>
+            <p class="subtitle">Globales Admin-Panel für den Straftatenrechner</p>
 
             <div class="login-box">
                 <div class="form-group">
@@ -371,7 +424,7 @@
             </div>
 
             <a href="/" class="back-link" style="margin-top: 24px;">
-                <i class="fas fa-arrow-left"></i> Zurueck zur Startseite
+                <i class="fas fa-arrow-left"></i> Zurück zur Startseite
             </a>
         </div>
     </div>
@@ -380,7 +433,7 @@
     <div class="panel" id="admin-panel">
         <div class="container">
             <a href="/" class="back-link">
-                <i class="fas fa-arrow-left"></i> Zurueck zur Startseite
+                <i class="fas fa-arrow-left"></i> Zurück zur Startseite
             </a>
 
             <div class="page-header">
@@ -407,7 +460,8 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3><i class="fas fa-network-wired" style="color: var(--accent); margin-right: 8px;"></i>Alle Netzwerke</h3>
+                    <h3><i class="fas fa-network-wired" style="color: var(--accent); margin-right: 8px;"></i>Alle
+                        Netzwerke</h3>
                 </div>
                 <div class="card-body" id="networkTableContainer">
                     <div class="empty-state">
@@ -430,12 +484,12 @@
             <div class="form-group">
                 <label>Zugangs-Passwort</label>
                 <input type="password" id="newNetworkPassword" placeholder="Min. 4 Zeichen">
-                <p class="info-text">Dieses Passwort benoetigen Mitglieder zum Beitreten</p>
+                <p class="info-text">Dieses Passwort benötigen Mitglieder zum Beitreten</p>
             </div>
             <div class="form-group">
                 <label>Admin-Passwort</label>
                 <input type="password" id="newNetworkAdminPassword" placeholder="Min. 4 Zeichen">
-                <p class="info-text">Fuer die Gesetzesverwaltung innerhalb des Netzwerks</p>
+                <p class="info-text">Für die Gesetzesverwaltung innerhalb des Netzwerks</p>
             </div>
             <div class="modal-buttons">
                 <button class="btn" onclick="closeModal('createModal')">Abbrechen</button>
@@ -464,7 +518,7 @@
                 <input type="password" id="editNetworkAdminPassword" placeholder="Neues Admin-Passwort">
             </div>
             <div class="form-group">
-                <label>Aktuelles Admin-Passwort des Netzwerks (zur Bestaetigung)</label>
+                <label>Aktuelles Admin-Passwort des Netzwerks (zur Bestätigung)</label>
                 <input type="password" id="editCurrentAdminPassword" placeholder="Aktuelles Admin-Passwort">
             </div>
             <div class="modal-buttons">
@@ -479,22 +533,24 @@
     <!-- Delete Network Modal -->
     <div class="modal-overlay" id="deleteModal">
         <div class="modal">
-            <h3><i class="fas fa-trash" style="color: var(--danger);"></i>Netzwerk loeschen</h3>
+            <h3><i class="fas fa-trash" style="color: var(--danger);"></i>Netzwerk löschen</h3>
             <input type="hidden" id="deleteNetworkId">
             <p style="margin-bottom: 16px;">
-                Moechten Sie das Netzwerk <strong id="deleteNetworkName" style="color: var(--danger);"></strong> wirklich loeschen?
+                Möchten Sie das Netzwerk <strong id="deleteNetworkName" style="color: var(--danger);"></strong> wirklich
+                löschen?
             </p>
             <p style="color: var(--danger); font-size: 13px; margin-bottom: 20px;">
-                <i class="fas fa-exclamation-triangle"></i> Diese Aktion kann nicht rueckgaengig gemacht werden. Alle Gesetze und Sessions des Netzwerks werden geloescht!
+                <i class="fas fa-exclamation-triangle"></i> Diese Aktion kann nicht rückgängig gemacht werden. Alle
+                Gesetze und Sessions des Netzwerks werden gelöscht!
             </p>
             <div class="form-group">
-                <label>Admin-Passwort des Netzwerks (zur Bestaetigung)</label>
+                <label>Admin-Passwort des Netzwerks (zur Bestätigung)</label>
                 <input type="password" id="deleteAdminPassword" placeholder="Admin-Passwort eingeben">
             </div>
             <div class="modal-buttons">
                 <button class="btn" onclick="closeModal('deleteModal')">Abbrechen</button>
                 <button class="btn btn-danger" onclick="deleteNetwork()">
-                    <i class="fas fa-trash"></i> Endgueltig loeschen
+                    <i class="fas fa-trash"></i> Endgültig löschen
                 </button>
             </div>
         </div>
@@ -617,7 +673,7 @@
             const adminPassword = document.getElementById('newNetworkAdminPassword').value;
 
             if (!name || !password || !adminPassword) {
-                alert('Bitte alle Felder ausfuellen');
+                alert('Bitte alle Felder ausfüllen');
                 return;
             }
 
@@ -742,4 +798,5 @@
         });
     </script>
 </body>
+
 </html>
